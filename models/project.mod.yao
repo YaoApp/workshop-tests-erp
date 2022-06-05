@@ -1,0 +1,109 @@
+{
+  "lang": "1.0.0",
+  "version": "1.0.0",
+  "name": "Project",
+  "table": { "name": "project", "comment": "The project table" },
+  "columns": [
+    { "label": "ID", "name": "id", "type": "ID", "comment": "ID" },
+    {
+      "label": "User",
+      "name": "user_id",
+      "type": "bigInteger",
+      "comment": "The User ID"
+    },
+    {
+      "label": "Name",
+      "name": "name",
+      "type": "string",
+      "length": 600,
+      "comment": "Name"
+    },
+    {
+      "label": "Summary",
+      "name": "summary",
+      "type": "string",
+      "length": 600,
+      "comment": "Summary",
+      "nullable": true,
+      "index": true
+    },
+    {
+      "label": "Description",
+      "name": "desc",
+      "type": "text",
+      "comment": "Description",
+      "nullable": true
+    },
+    {
+      "label": "Report",
+      "name": "report",
+      "type": "text",
+      "comment": "Report",
+      "nullable": true
+    },
+    {
+      "label": "Priority",
+      "name": "priority",
+      "type": "enum",
+      "default": "C",
+      "option": ["A", "B", "C", "D"],
+      "comment": "Priority: A  B  C  D ",
+      "index": true
+    },
+    {
+      "label": "Process",
+      "name": "process",
+      "type": "enum",
+      "default": "Connecting",
+      "option": [
+        "Connecting",
+        "Connected",
+        "Docking",
+        "Docked",
+        "Signing",
+        "Signed",
+        "FirstPay",
+        "Pending",
+        "Completed",
+        "Paid"
+      ],
+      "comment": "Process: Connecting",
+      "index": true
+    },
+    {
+      "label": "Contact",
+      "name": "contact_name",
+      "type": "string",
+      "length": 200,
+      "comment": "Contact",
+      "nullable": true,
+      "index": true
+    },
+    {
+      "label": "ContactTitle",
+      "name": "contact_title",
+      "type": "string",
+      "length": 200,
+      "comment": "ContactTitle",
+      "nullable": true,
+      "index": true
+    },
+    {
+      "label": "Mobile",
+      "name": "contact_mobile",
+      "type": "string",
+      "comment": "Mobile",
+      "nullable": true,
+      "index": true
+    }
+  ],
+  "relations": {
+    "user": {
+      "type": "hasOne",
+      "model": "user",
+      "key": "id",
+      "foreign": "user_id"
+    }
+  },
+  "option": { "timestamps": true, "soft_deletes": true }
+}

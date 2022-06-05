@@ -1,0 +1,20 @@
+{
+  "lang": "1.0.0",
+  "version": "1.0.0",
+  "name": "ERP",
+  "description": "the ERP application for the workshop unit testing",
+  "dashboard": {
+    "engine": "xgen",
+    "version": "0.9.1",
+    "option": {
+      "defaultRouter": "/login/user",
+      "hideNotification": true,
+      "hideSetting": true
+    }
+  },
+  "server": {
+    "web": { "route": "/", "rewrite": { "app/*": "/react-dist/index.html" } },
+    "api": { "route": "/api" }
+  },
+  "build": { "dashboard": "/admin", "name": "yerp" }
+}

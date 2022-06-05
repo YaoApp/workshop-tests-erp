@@ -9,7 +9,7 @@
       "label": "User",
       "name": "user_id",
       "type": "bigInteger",
-      "comment": "The User ID"
+      "comment": "Belong to User (user.id)"
     },
     {
       "label": "Name",

@@ -1,6 +1,6 @@
 {
-  "lang": "1.0.0",
-  "version": "1.0.0",
+  "LANG": "1.0.0",
+  "VERSION": "1.0.0",
   "name": "User",
   "table": { "name": "user", "comment": "User" },
   "columns": [
